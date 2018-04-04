@@ -10,3 +10,15 @@ docker service create --name flask --secret source=title_v1,target=secret -p 500
 
 
 docker service update --secret-rm title_v1 --secret-add source=title_v2,target=secret flask
+
+
+
+secrets
+create repo
+create policy
+pull/push
+export DOCKER_CONTENT_TRUST=1
+
+
+
+https://github.com/clemenko/best_practices

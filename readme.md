@@ -127,10 +127,10 @@ Let's start creating...
 3. Navigate to `Swarm` --> `Secrets` on the left hand menu. And then click `Create Secret`.
     > ![](images/create_secret.jpg)
     
-4. We are going to create a secret titled `title_v1`. The Content of the secret doesn't matter. Here is an idea `2018 Docker Fed Summit is fun and secure.` We do not need to add it to a collection at this point. It will default to our private collection. 
+4. We are going to create a secret titled `title_v1`. The Content of the secret doesn't matter. Here is an idea `2018 Docker Government Summit is fun and secure.` We do not need to add it to a collection at this point. It will default to our private collection. 
     ![](images/create_secret_v1.jpg)
 
-5. Now let's create a second secret called `title_v2` with the content `2018 Dockercon might be more fun.`. 
+5. Now let's create a second secret called `title_v2` with the content `2018 Dockercon in San Francisco might be more fun.`. 
   ![](images/create_secret_v2.jpg)
 
 6. You should now have two secrets named `title_v1` and `title_v2`.

@@ -1,4 +1,4 @@
-# Securing Applications with Docker EE Advanced
+# Securing Applications with Docker Enterrpise Edition Advanced
 
 In this lab you will integrate Docker Enterrpise Edition Advanced in to your development pipeline. You will build your application from a Dockerfile and push your image to the Docker Trusted Registry (DTR). DTR will scan your image for vulnerabilities so they can be fixed before your application is deployed. This helps you build more secure apps!
 

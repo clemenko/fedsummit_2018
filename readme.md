@@ -1,6 +1,6 @@
-# Securing Applications with Docker Enterrpise Edition Advanced
+# Securing Applications with Docker Enterprise Edition Advanced
 
-In this lab you will integrate Docker Enterrpise Edition Advanced in to your development pipeline. You will build your application from a Dockerfile and push your image to the Docker Trusted Registry (DTR). DTR will scan your image for vulnerabilities so they can be fixed before your application is deployed. This helps you build more secure apps!
+In this lab you will integrate Docker Enterprise Edition Advanced in to your development pipeline. You will build your application from a Dockerfile and push your image to the Docker Trusted Registry (DTR). DTR will scan your image for vulnerabilities so they can be fixed before your application is deployed. This helps you build more secure apps!
 
 
 > **Difficulty**: Beginner
@@ -83,7 +83,7 @@ This workshop is designed to demonstrate the power of Docker Secrets, Image Prom
 
 2. Fill out the form, and click `submit`. You will then be redirected to the PWD environment.
 
-	It may take a few minutes to provision out your PWD environment. After this step completes, you'll be ready to move on to task 1.2: Install a Windows worker node
+    It may take a few minutes to provision out your PWD environment. After this step completes, you'll be ready to move on to task 1.2: Install a Windows worker node
 
 ## <a name="task2"></a>Task 2: Create Secrets
 Secrets are new starting with Docker EE Engine 1.13 as well as Docker EE 17.03. A _secret_ is a blob of data such as a password, SSH private key, SSL certificate, or another piece of data that should not be transmitted over a network. Before UCP secrets were stored unencrypted in a Dockerfile or stored in your application's source code. With UCP Secrets we can now centrally manage and securely transmit it only to those containers that need access to it. Secrets follow a Least Privileged Distribution model and are encrypted at rest and in transit in a Docker swarm. A given secret is only accessible to those services which have been granted explicit access to it and only while those service tasks are running.
@@ -114,17 +114,17 @@ Let's start creating...
 
 1. From the main PWD screen click the `UCP` button on the left side of the screen
 
-	> **Note**: Because this is a lab-based install of Docker EE we are using the default self-signed certs. Because of this your browser may display a security warning. It is safe to click through this warning.
-	>
-	> In a production environment you would use certs from a trusted certificate authority and would not see this screen.
-	>
-	> ![](./images/ssl_error.png)
+    > **Note**: Because this is a lab-based install of Docker EE we are using the default self-signed certs. Because of this your browser may display a security warning. It is safe to click through this warning.
+    >
+    > In a production environment you would use certs from a trusted certificate authority and would not see this screen.
+    >
+    > ![](./images/ssl_error.png)
 
 2. When prompted enter your username and password (these can be found below the console window in the main PWD screen). The UCP web interface should load up in your web browser.
 
-	> **Note**: Once the main UCP screen loads you'll notice there is a red warning bar displayed at the top of the UCP screen, this is an artifact of running in a lab environment. A UCP server configured for a production environment would not display this warning
-	>
-	> ![](./images/red_warning.jpg)
+    > **Note**: Once the main UCP screen loads you'll notice there is a red warning bar displayed at the top of the UCP screen, this is an artifact of running in a lab environment. A UCP server configured for a production environment would not display this warning
+    >
+    > ![](./images/red_warning.jpg)
 
 3. Navigate to `Swarm` --> `Secrets` on the left hand menu. And then click `Create Secret`.
     > ![](images/create_secret.jpg)
@@ -132,7 +132,7 @@ Let's start creating...
 4. We are going to create a secret titled `title_v1`. The Content of the secret doesn't matter. Here is an idea `2018 Docker Government Summit is fun and secure.` We do not need to add it to a collection at this point. It will default to our private collection.
     ![](images/create_secret_v1.jpg)
 
-5. Now let's create a second secret called `title_v2` with the content `2018 Dockercon in San Francisco might be more fun.`.
+5. Now let's create a second secret called `title_v2` with the content `2018 DockerCon in San Francisco might be more fun.`.
   ![](images/create_secret_v2.jpg)
 
 6. You should now have two secrets named `title_v1` and `title_v2`.
@@ -207,11 +207,11 @@ Before we create the repositories, let's start with enabling the Docker Image Sc
 
 1. From the main PWD screen click the `DTR` button on the left side of the screen
 
-	> **Note**: Because this is a lab-based install of Docker EE we are using the default self-signed certs. Because of this your browser may display a security warning. It is safe to click through this warning.
-	>
-	> In a production environment you would use certs from a trusted certificate authority and would not see this screen.
-	>
-	> ![](./images/ssl_error.png)
+    > **Note**: Because this is a lab-based install of Docker EE we are using the default self-signed certs. Because of this your browser may display a security warning. It is safe to click through this warning.
+    >
+    > In a production environment you would use certs from a trusted certificate authority and would not see this screen.
+    >
+    > ![](./images/ssl_error.png)
 
 2.  Navigate to `System` --> `Security`.
 3.  Select `Enable Scanning`. In the popup leave it in `Online` mode and select `Enable`. The CVE database will start downloading. This can take a few minutes. Please be patient for it to complete.
@@ -324,7 +324,7 @@ Let's take a look at pushing an older image that we know will have some vulnerab
     ```
 
 
-3. Navigate to DTR --> `Repostories` --> `admin/alpine` --> `Images`.
+3. Navigate to DTR --> `Repositories` --> `admin/alpine` --> `Images`.
     ![](images/old_image.jpg)
 
 4. Take a look at the details to see exactly what piece of the image is vulnerable.

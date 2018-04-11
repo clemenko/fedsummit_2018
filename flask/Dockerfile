@@ -9,4 +9,4 @@ WORKDIR /code
 ADD . /code
 EXPOSE 5000
 HEALTHCHECK CMD curl -f http://localhost:5000/ || exit 1
-CMD ["python", "app.py"]
+CMD ["python3", "app.py"]
